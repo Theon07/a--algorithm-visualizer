@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!--<script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>-->
+  <script language="javascript" type="text/javascript" src="p5.min.js"></script>
+
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <script language="javascript" type="text/javascript" src="spot.js"></script>
+  <script language="javascript" type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="intro">
+    <h1>A* Algorithm Vizualizer</h1>
+    <h3>This project helps to vizually understand A* pathfinding Algorithm.</h3>
+    <p>Choose the map size below.<br><br>You will start with a random map where you can change Starting position, destination position and obstricles.</p>
+    <label for="size">Enter size of canvas : </label><input type="number" name="size" id="cnvSize" value="10" onchange="resetCanvas()"><br>
+    <!-- <label class="container1" for="randomMap">
+      <input type="checkbox" id="randomMap" name="randomMap" value="randomMap" checked="true">Random Map
+      <span class="checkmark1"></span>
+    </label><br> -->
+    <input type="button" value="Let's go " onclick="introDone()">
+  </div>
+  <div id="inputs">
+    <label class="container" for="start">Start
+      <input type="radio" id="start" name="inputOptions" value="start">
+      <span class="checkmark"></span>
+    </label><br>
+    <label class="container" for="end">End
+      <input type="radio" id="end" name="inputOptions" value="end" >
+      <span class="checkmark"></span>
+    </label><br>
+    <label class="container" for="wall">Walls
+      <input type="radio" id="wall" name="inputOptions" value="wall" checked="true">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+  <div class="btn" onclick="running()"><i class="fas fa-play"></i></div>
+  <div class="btnReload" onclick="location.reload()"><i class="fas fa-redo-alt"></i></div>
+</body>
+
+</html>
