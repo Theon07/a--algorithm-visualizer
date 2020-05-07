@@ -35,7 +35,7 @@ var path = [];
 
 
 function setup() {
-  frameRate(10);
+  
   canvasSize = windowWidth < windowHeight ? windowWidth - 100 : windowHeight - 100;
   createCanvas(canvasSize , canvasSize);
   console.log('A*');
