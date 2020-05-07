@@ -106,7 +106,7 @@ input {
 }
 
 .intro {
-  overflow-y: scroll;
+  overflow: scroll;
   position: absolute;
   z-index: 3;
   background-color: white;
