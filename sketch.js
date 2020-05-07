@@ -91,7 +91,7 @@ function draw() {
       // Did I finish?
       if (current === end) {
         noLoop();
-        run = false;
+        //run = false;
         alert('use this path.')
         done();
       }
@@ -134,7 +134,7 @@ function draw() {
     } else {
       alert('no solution.');
       noLoop();
-      run = false;
+      //run = false;
       done();
       return;
     }
