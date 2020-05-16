@@ -70,6 +70,7 @@ function introDone() {
   }
 
   function resetCanvas(){
+    grid = undefined;
     var s = document.querySelector("#cnvSize").value;
     rows = cols = s;
     grid = new Array(s);
