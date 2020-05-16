@@ -133,7 +133,7 @@ function draw() {
       }
       // Uh oh, no solution
     } else {
-      alert('no solution.');
+      alert('No path between given points');
       run = false;
       done();
       return;
