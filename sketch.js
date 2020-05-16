@@ -35,7 +35,8 @@ var path = [];
 
 
 function setup() {
-  frameRate(10);
+  //frameRate(10);
+  
   canvasSize = windowWidth < windowHeight ? windowWidth - 100 : windowHeight - 100;
   createCanvas(canvasSize , canvasSize);
   console.log('A*');
@@ -133,21 +134,15 @@ function draw() {
       // Uh oh, no solution
     } else {
       alert('no solution.');
-      noLoop();
       run = false;
+      noLoop()
       done();
       return;
     }
 
-    // Draw current state of everything
+  
 
-    for (var i = 0; i < closedSet.length; i++) {
-      closedSet[i].show(color(255, 0, 0, 50));
-    }
-
-    for (var i = 0; i < openSet.length; i++) {
-      openSet[i].show(color(0, 255, 0, 50));
-    }
+  
 
     // Find the path by working backwards
     path = [];
@@ -171,6 +166,14 @@ function draw() {
       vertex(path[i].i * w + w / 2, path[i].j * h + h / 2);
     }
     endShape();
+  }
+    // Draw current state of everything
+  for (var i = 0; i < closedSet.length; i++) {
+    closedSet[i].show(color(255, 0, 0, 50));
+  }
+
+  for (var i = 0; i < openSet.length; i++) {
+    openSet[i].show(color(0, 255, 0, 50));
   }
   for (var i = 0; i < cols; i++) {
     for (var j = 0; j < rows; j++) {
