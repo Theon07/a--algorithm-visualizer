@@ -135,7 +135,6 @@ function draw() {
     } else {
       alert('no solution.');
       run = false;
-      noLoop()
       done();
       return;
     }
