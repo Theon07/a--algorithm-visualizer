@@ -93,7 +93,7 @@ function draw() {
       if (current === end) {
         noLoop();
         run = false;
-        alert('use this path.')
+        alert('This is path of distance '+closedSet.length+'. use this path.')
         done();
       }
 
