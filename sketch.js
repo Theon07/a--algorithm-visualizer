@@ -75,7 +75,7 @@ function setup() {
 
 function draw() {
 
-
+  //frameRate(10);
   background(255);
   if (run) {
     // Am I still searching?
